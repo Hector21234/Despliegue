@@ -1,0 +1,26 @@
+name: PHP Composer
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Validate composer.json and composer.lock
+      run: echo probando php
+
+    - name: Cache Composer packages
+      uses: php-actions/phpunit@v9
+      with:
+       commond: phpunit CalculadoraTest.php

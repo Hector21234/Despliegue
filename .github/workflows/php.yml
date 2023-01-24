@@ -23,4 +23,4 @@ jobs:
     - name: Cache Composer packages
       uses: php-actions/phpunit@v9
       with:
-       command: phpunit calculadoraTest.php
+       command: phpunit CalculadoraTest.php

@@ -5,7 +5,7 @@ final class CalculadoraTest extends TestCase
 {
 public function testSuma()
 {
-$calc = new Calculadora(3,3);
+$calc = new Calculadora(4,3);
 $this->assertEquals(7, $calc->suma());
 }
 
